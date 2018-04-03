@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'),
+const mongoose = require('mongoose');
 const Student = mongoose.model('Student');
 
 function getErrorMessage(err) {

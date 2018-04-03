@@ -26,13 +26,13 @@ const StudentSchema = new Schema({
 });
 
 // Create an instance method for hashing a password
-UserSchema.methods.hashPassword = function (password) {
+StudentSchema.methods.hashPassword = function (password) {
     //digest parameter required in version 9 of Node.js
     return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha512').toString('base64');
 };
 
 // Create an instance method for authenticating student
-UserSchema.methods.authenticate = function (password) {
+StudentSchema.methods.authenticate = function (password) {
     return this.password === this.hashPassword(password);
 };
 

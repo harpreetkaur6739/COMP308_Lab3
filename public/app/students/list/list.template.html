@@ -1,0 +1,12 @@
+
+<h1>Students</h1>
+<table>
+    <li *ngFor="let student of students">
+        <a [routerLink]="['/students', student._id]">{{student.studentNumber}}</a>
+        <br>
+        <small>{{student.fullName}}</small>
+    </li>
+</table>
+<div *ngIf="students && students.length === 0">
+    No students yet, why don't you <a [routerLink]="['/students/create']">create one</a>?
+</div>

@@ -1,0 +1,65 @@
+<h1>New Article</h1>
+<form (ngSubmit)="create()" novalidate>
+    
+
+    <div>
+        <label for="studentNumber">Student Number</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.studentNumber"
+                   name="studentNumber" placeholder="StudentNumber" />
+        </div>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <div>
+            <input type="password" required [(ngModel)]="student.password"
+                   name="password" placeholder="Password" />
+        </div>
+    </div>
+    <div>
+        <label for="firstName">First Name</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.firstName" name="firstName" placeholder="FirstName" />                
+        </div>
+    </div>
+    <div>
+        <label for="lastName">Last Name</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.lastName" name="lastName" placeholder="LastName" />                
+        </div>
+    </div>
+    <div>
+        <label for="address">Address</label>
+        <div>
+            <textarea cols="20" rows="5" required [(ngModel)]="student.address" name="address" placeholder="Address"></textarea>              
+        </div>
+    </div>
+    <div>
+        <label for="city">City</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.city" name="city" placeholder="City" />                
+        </div>
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <div>
+            <input type="number" required [(ngModel)]="student.phone" name="phone" placeholder="Phone" />                
+        </div>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.email" name="email" placeholder="Email" />                
+        </div>
+    </div>
+    <div>
+        <label for="program">Program</label>
+        <div>
+            <input type="text" required [(ngModel)]="student.program" name="program" placeholder="Program" />                
+        </div>
+    </div>
+    <div>
+        <input type="submit" >
+    </div>
+    <strong id="error">{{errorMessage}}</strong>
+</form>

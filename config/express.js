@@ -52,6 +52,7 @@ module.exports = function () {
     app.use('/lib', express.static(path.resolve('./node_modules')));
 
     require('../app/routes/student.server.routes.js')(app);
+    require('../app/routes/index.server.routes.js')(app);
     // Return the Express application instance
     return app;
 };
